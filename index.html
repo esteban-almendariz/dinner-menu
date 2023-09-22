@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <img class="header-img" src="./images/header_img.png" >
+        <div class="main-container">
+            
+            <div id="menu"></div>
+            <div class="order-container">
+                <h2>Your Order</h2>
+                
+                <div class="items-list-container" id='items'></div> 
+                
+                <div class="total-price">
+                    <p>Total price:</p><span id='total-price'>$0</span>    
+                </div>
+                <button class="complete-order-btn">Complete order</button>
+            </div>
+        </div>
+
+    <div id="app"></div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
