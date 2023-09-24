@@ -3,6 +3,7 @@ body {
   width: 80%;
   height: 100%;
   object-fit: cover;
+  font-size: 20px;
 } 
 
 img {
@@ -12,7 +13,7 @@ img {
 }
 
 .emoji {
-  font-size: 60px;
+  
 }
 
 .header-img {
@@ -47,7 +48,10 @@ img {
   text-align: center;
 }
 
-
+.increment-btn:hover {
+  cursor: pointer;
+  border-color: #16DB99;
+}
 
 .order-container {
   text-align: center;
@@ -76,6 +80,11 @@ img {
   color: gray;
   margin-left: 10px;
   font-size: .80rem;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  color: #16DB99;
 }
 
 .total-price {
