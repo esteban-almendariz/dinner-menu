@@ -1,6 +1,6 @@
 body {
   margin: auto;
-  width: 600px;
+  width: 550px;
   height: 100%;
   object-fit: cover;
   font-size: 25px;
@@ -15,9 +15,9 @@ img {
 }
 
 .title {
-  color: rgb(230, 229, 229);
+  color: black;
   position: relative;
-  top: -140px;
+  top: -185px;
   right: -20px;
   font-size: 1.1rem;
   width: 320px;
