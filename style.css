@@ -1,7 +1,7 @@
 body {
   margin: auto;
   margin-top: 40px;
-  width: 700px;
+  width: 600px;
   height: 100%;
   object-fit: cover;
   font-size: 25px;
@@ -19,7 +19,7 @@ img {
   color: rgb(230, 229, 229);
   position: relative;
   top: -140px;
-  right: -50px;
+  right: -20px;
   font-size: 1.1rem;
   width: 320px;
   text-align: center;
