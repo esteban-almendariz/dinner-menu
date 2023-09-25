@@ -30,6 +30,9 @@ img {
   margin-bottom: 5px;
 }
 
+.emoji {
+  font-size: 6rem;
+}
 
 .header-img {
   display: block;
@@ -102,6 +105,7 @@ img {
   display: flex;
   justify-content: flex-start;
   padding: 0;
+  margin-bottom: 15px;
 }
 
 .order-price {

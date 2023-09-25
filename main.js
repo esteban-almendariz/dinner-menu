@@ -14,7 +14,7 @@ document.getElementById('menu').innerHTML += menuArray.map(item => {
 
     return `
     <div class="item-container" id=${id}>
-                <img src=${emoji} class="emoji">
+                <p class="emoji">${emoji}</p>
                 <div class='detail-container'>
                     <h2>${name}</h2>
                     <p class='ingredients'>${ingredients}</p>

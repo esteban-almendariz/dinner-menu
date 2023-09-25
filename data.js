@@ -4,20 +4,20 @@ const menuArray = [
         ingredients: ["pepperoni, mushrom, mozarella"],
         id: 0,
         price: 14,
-        emoji: './images/pizza.png'
+        emoji: '🍕'
     },
     {
         name: "Hamburger",
         ingredients: ["beef, cheese, lettuce"],
         price: 12,
-        emoji: './images/burger.png',
+        emoji: '🍔',
         id: 1
     },
         {
         name: "Beer",
         ingredients: ["grain, hops, yeast, water"],
         price: 10,
-        emoji: './images/beer.png',
+        emoji: '🍺',
         id: 2
     }
 ]
