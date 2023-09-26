@@ -114,12 +114,26 @@ const closeModal = function () {
   totalPrice = 0
   totalPriceEle.textContent = `$${totalPrice}`
   listCartItems.innerHTML = ''
+  Toastify({
+    text: "Order Received.",
+    duration: 3000,
+    newWindow: true,
+    stopOnFocus: true, // Prevents dismissing of toast on hover
+    gravity: "bottom", // `top` or `bottom`
+    position: "left", // `left`, `center` or `right`
+    style: {
+      color: 'white',
+      padding: '20px',
+      textAlign: 'center',
+      fontWeight: 'bold',
+      background: "linear-gradient(to right, #00b09b, #96c93d)",
+       },
+      }).showToast();
 }
 
 const handleSubmitForm = () => {
   formTitle.textContent = `${inputName.value}, your order will be delivered. `
   inputContainer.style.display = 'none'
-  
 }
 
 completeOrderBtn.addEventListener("click", openModal)
