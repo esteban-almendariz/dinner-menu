@@ -7,6 +7,7 @@ body {
   border: rgb(37, 97, 80) solid 8px;
   border-radius: 1.75%;
   font-family: "Poltawski Nowy", sans-serif;
+  background-color: rgb(242, 242, 242);
 } 
 
 img {
@@ -171,31 +172,63 @@ img {
   display: none;
   flex-direction: column;
   justify-content: center;
+ 
   text-align: center;
-  gap: 0.4rem;
+  margin: 0;
   width: 450px;
   padding: 1.3rem;
   min-height: 250px;
   position: absolute;
   top: 30%;
-  right: 35%;
   background-color: white;
   border: 5px solid #40c699;
   border-radius: 15px;
   z-index: 2;
 }
 
-.modal .flex {
+.flex {
+  margin: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-
 .btn-close {
-  transform: translate(10px, -20px);
+  transform: translate(410px, -65px);
   padding: 0.5rem 0.7rem;
   background: #eee;
   border-radius: 50%;
 }
 
+.btn-close:hover {
+  border: #0fa975 2px solid;
+}
+
+.form h3 {
+  margin: 10px 0;
+}
+
+.form input {
+  height: 25px;
+  border-radius: 2px;
+}
+
+.form input:focus {
+  outline: none;
+  border: 2px solid #40c699;
+}
+
+.form button {
+  background-color: #40c699;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background-color: #11b07b;
+  cursor: pointer;
+}

@@ -1,11 +1,16 @@
+import Toastify from 'toastify-js'
 import menuArray from '/data'
 
 const listCartItems = document.getElementById('items')
 const totalPriceEle = document.getElementById('total-price')
 const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
-const openModalBtn = document.getElementById("complete-order-btn");
-const closeModalBtn = document.querySelector(".btn-close");
+const completeOrderBtn = document.getElementById("complete-order-btn")
+const closeModalBtn = document.querySelector(".btn-close")
+const inputName = document.getElementById('input-name')
+const formSubmitBtn = document.getElementById('form-submit')
+const formTitle = document.getElementById('form-title')
+const inputContainer = document.getElementById('input-container')
 let totalPrice = 0
 
 
@@ -76,16 +81,48 @@ document.getElementById('items').addEventListener('click', handleRemoveItem)
 // Modal 
 
 const openModal = function () {
-  document.getElementById('modal').style.display = 'flex'
-  overlay.classList.remove("hidden")
-};
+  if(totalPrice === 0) {
+    Toastify({
+    text: "Please Add an Item to Your Order.",
+    duration: 3000,
+    newWindow: true,
+    stopOnFocus: true, // Prevents dismissing of toast on hover
+    gravity: "bottom", // `top` or `bottom`
+    position: "left", // `left`, `center` or `right`
+    style: {
+      color: 'white',
+      padding: '20px',
+      textAlign: 'center',
+      fontWeight: 'bold',
+      background: "linear-gradient(to right, #f86368, #b32d2e)",
+       },
+      }).showToast();
+    } else {
+      document.getElementById('modal').style.display = 'flex'
+      overlay.classList.remove("hidden")
+      formTitle.textContent = `Please enter your name. `
+      inputContainer.style.display = 'block'
+    }
+  }
+  
+  
 
 const closeModal = function () {
   document.getElementById('modal').style.display = 'none'
   modal.classList.add("hidden")
   overlay.classList.add("hidden")
+  totalPrice = 0
+  totalPriceEle.textContent = `$${totalPrice}`
+  listCartItems.innerHTML = ''
 }
 
-openModalBtn.addEventListener("click", openModal)
+const handleSubmitForm = () => {
+  formTitle.textContent = `${inputName.value}, your order will be delivered. `
+  inputContainer.style.display = 'none'
+  
+}
+
+completeOrderBtn.addEventListener("click", openModal)
 closeModalBtn.addEventListener("click", closeModal)
 overlay.addEventListener("click", closeModal);
+formSubmitBtn.addEventListener('click', handleSubmitForm)
